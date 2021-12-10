@@ -1,3 +1,4 @@
+This repo is a copy from https://github.com/IlyaTrofimov/latent_3d_points
 # Learning Representations and Generative Models For 3D Point Clouds
 Created by <a href="https://ai.stanford.edu/~optas/" target="_blank">Panos Achlioptas</a>, <a href="http://olga-diamanti.net" target="_blank">Olga Diamanti</a>, <a href="https://mitliagkas.github.io" target="_blank">Ioannis Mitliagkas</a>, <a href="https://geometry.stanford.edu/member/guibas/" target="_blank">Leonidas J. Guibas</a>.
 

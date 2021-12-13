@@ -1,6 +1,6 @@
 FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu18.04
-MAINTAINER Ilya Trofimov
-ENV TZ=Europe/Moscow
+MAINTAINER molnarszilard
+ENV TZ=Europe/Bucharest
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get -yqq update
@@ -29,7 +29,7 @@ RUN pip install tensorflow_gpu==1.13.1
 RUN git config --global user.email "molnarszilard10@gmail.com"
 RUN git config --global user.name "molnarszilard"
 
-RUN mkdir latent_3d; cd latent_3d; git clone https://github.com/IlyaTrofimov/latent_3d_points.git
+RUN mkdir latent_3d; cd latent_3d; git clone https://github.com/molnarszilard/latent_3d_points.git
 RUN latent_3d/latent_3d_points/download_data.sh
 
 EXPOSE 8891

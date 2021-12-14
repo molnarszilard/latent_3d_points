@@ -32,8 +32,8 @@ RUN git config --global user.name "molnarszilard"
 RUN mkdir latent_3d; cd latent_3d; git clone https://github.com/molnarszilard/latent_3d_points.git
 RUN latent_3d/latent_3d_points/download_data.sh
 
-EXPOSE 8891
-RUN echo "(jupyter notebook --ip=0.0.0.0 --port 8891 --allow-root &)" > start_jupyter.sh
+EXPOSE 8899
+RUN echo "(jupyter notebook --ip=0.0.0.0 --port 8899 --allow-root &)" > start_jupyter.sh
 CMD ["/bin/bash"]
 
 # RUN echo "conda activate py2.7" > ~/.bashrc

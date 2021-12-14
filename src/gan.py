@@ -54,3 +54,18 @@ class GAN(Neural_Net):
         loss_d = tf.reduce_mean(synthetic_logit) - tf.reduce_mean(real_logit)
         loss_g = -tf.reduce_mean(synthetic_logit)
         return loss_d, loss_g
+
+    def generate_chair(self, n_samples, noise_params):
+        noise = self.generator_noise_distribution_chair(n_samples, self.noise_dim, **noise_params)
+        feed_dict = {self.noise: noise}
+        return self.sess.run([self.generator_out], feed_dict=feed_dict)[0]
+
+    def generate_chair_ml(self, n_samples, noise_params):
+        noise = self.generator_noise_distribution_chair(n_samples, self.noise_dim, **noise_params)
+        feed_dict = {self.noise: noise}
+        return self.sess.run([self.generator_out], feed_dict=feed_dict)[0]
+
+    def generate_table(self, n_samples, noise_params):
+        noise = self.generator_noise_distribution_chair(n_samples, self.noise_dim, **noise_params)
+        feed_dict = {self.noise: noise}
+        return self.sess.run([self.generator_out], feed_dict=feed_dict)[0]

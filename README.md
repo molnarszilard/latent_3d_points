@@ -76,14 +76,23 @@ If you have proxy:
 
 
 ```conda activate py27```
+
 ```export PYTHONPATH=/latent_3d/```
+
 ```cd latent_3d/latent_3d_points/external/structural_losses/```
+
 ```bash compile.sh```
+
 ```cd /latent_3d/latent_3d_points/```
+
 ```bash download_data.sh```
+
 ```cd /```
+
 ```pip install open3d```
+
 ```apt-get install ffmpeg libsm6 libxext6  -y```
+
 ```bash start_jupyter.sh```
 
 

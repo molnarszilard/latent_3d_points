@@ -63,37 +63,29 @@ Use the function snc_category_to_synth_id, defined in src/in_out/, to map a clas
 The project contains some very old libraries so the best would be to run it in a docker environment.
 run: 
 
-'''sudo bash docker_build.sh''' 
+```sudo bash docker_build.sh```
 
 to create the docker, then to start it: 
 
-'''sudo bash docker_run.sh'''
+```sudo bash docker_run.sh```
 
 inside the docker run the following commands:
 
-'''
-conda activate py27
+If you have proxy:
+```export http_proxy=http://cache.utcluj.ro:3128/ https_proxy=http://cache.utcluj.ro:3128/```
 
-export PYTHONPATH=/latent_3d/
 
-cd latent_3d/latent_3d_points/external/structural_losses/
+```conda activate py27```
+```export PYTHONPATH=/latent_3d/```
+```cd latent_3d/latent_3d_points/external/structural_losses/```
+```bash compile.sh```
+```cd /latent_3d/latent_3d_points/```
+```bash download_data.sh```
+```cd /```
+```pip install open3d```
+```apt-get install ffmpeg libsm6 libxext6  -y```
+```bash start_jupyter.sh```
 
-bash compile.sh
-
-cd /latent_3d/latent_3d_points/
-
-export http_proxy=http://cache.utcluj.ro:3128/ https_proxy=http://cache.utcluj.ro:3128/
-
-bash download_data.sh
-
-cd /
-
-pip install open3d
-
-apt-get install ffmpeg libsm6 libxext6  -y
-
-bash start_jupyter.sh
-'''
 
 Now you should be able to access the jupyter notebooks through a web browser on ip_address:8891 (change port if needed)
 ### Usage
